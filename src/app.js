@@ -9,7 +9,7 @@ mongoose.connect(process.env.DATABASE_CONNECTION_STRING, {
   useUnifiedTopology: true // a pedido da lib
 });
 // Load models
-const Mentions = require('./models/mentions');
+// const Mentions = require('./models/mentions');
 const db = mongoose.connection;
 
 db.on('connected', () => {
