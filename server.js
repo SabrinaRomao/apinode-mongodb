@@ -4,6 +4,9 @@
 var express = require('express');
 var app = express();
 /* voce esqueceu de chamar o modulod o express */
+app.get('/', function (req, res) {
+  res.send('Hello World!');
+});
 const http = require('http');
 const debug = require('debug')('nodestr:server');
 
