@@ -8,7 +8,8 @@ mongoose.connect(process.env.DATABASE_CONNECTION_STRING, {
   useNewUrlParser: true,
   useUnifiedTopology: true // a pedido da lib
 });
-
+// Load models
+const Mentions = require('./models/mentions');
 const db = mongoose.connection;
 
 db.on('connected', () => {
@@ -35,8 +36,16 @@ process.on('SIGINT', () => {
     process.exit(0);
   });
 });
+// Load models
+
+const Mentions = require('./models/mentions');
+
 // Load routes
 const indexRoutes = require('./routes/index-routes');
 app.use('/', indexRoutes);
+
+const mentionsRoutes = require('./routes/mentions-routes');
+app.use('/mentions', mentionsRoutes);
+
 
 module.exports = app;

@@ -1,8 +1,8 @@
 const app = require('./src/app');
 /* voce esqueceu de chamar o modulod o express */
 /* https://expressjs.com/pt-br/starter/hello-world.html */
-// const express = require('express');
-// const app = express();
+const express = require('express');
+//const app = express();
 
 
 const http = require('http');
