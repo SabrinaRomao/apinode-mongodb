@@ -1,8 +1,15 @@
 const express = require('express');
 const mongoose = require('mongoose');
+
+
+
 require('dotenv').config();
 // App
 const app = express();
+// Body Parser ????
+console.log("#### Depois de entender colocar aqui ######")
+
+console.log("#### Depois de entender colocar aqui ######")
 // Database
 mongoose.connect(process.env.DATABASE_CONNECTION_STRING, {
   useNewUrlParser: true,
