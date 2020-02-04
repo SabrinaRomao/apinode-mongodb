@@ -5,13 +5,18 @@ require('dotenv').config();
 const app = express();
 // Database
 mongoose.connect(process.env.DATABASE_CONNECTION_STRING, {
-  useNewUrlParser: true
+  useNewUrlParser: true,
+  useUnifiedTopology: true // a pedido da lib
 });
 
 const db = mongoose.connection;
 
 db.on('connected', () => {
-  console.log('Mongoose default connection is open');
+  console.log("### ####")
+  console.log("### ####")
+  console.log('Mongoose Conectado e abertoooo agora funciona');
+  console.log("### ####")
+  console.log("### ####")
 });
 
 db.on('error', err => {
