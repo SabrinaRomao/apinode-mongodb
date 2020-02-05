@@ -1,0 +1,3 @@
+DATABASE_CONNECTION_STRING=mongodb://user:senha@servidor.mlab.com:numPorta/database
+
+#colocar string de conexao do mongodb assim !!!
