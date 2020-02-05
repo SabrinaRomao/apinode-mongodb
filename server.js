@@ -1,8 +1,6 @@
 const app = require('./src/app');
-/* voce esqueceu de chamar o modulod o express */
-/* https://expressjs.com/pt-br/starter/hello-world.html */
 const express = require('express');
-//const app = express();
+// chamando modulo express
 
 
 const http = require('http');
@@ -25,6 +23,8 @@ function normalizePort(val) {
 
 const port = normalizePort(process.env.PORT || 3000);
 app.set('port', port);
+//definindo uma porta padrao
+
 
 // error handler
 function onError(error) {
@@ -62,3 +62,4 @@ server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
 console.log(`API is alive on ${port}!`);
+//criando servidor

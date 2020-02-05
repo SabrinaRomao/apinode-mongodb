@@ -6,10 +6,11 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 // App
 const app = express();
-// Body Parser ????
-console.log("#### Depois de entender colocar aqui ######")
+//body parser é necessário pra fazer post
+const bodyParser = require('body-parser');
+app.use(bodyParser.json())
 
-console.log("#### Depois de entender colocar aqui ######")
+//conectando com o banco
 // Database
 mongoose.connect(process.env.DATABASE_CONNECTION_STRING, {
   useNewUrlParser: true,
